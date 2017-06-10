@@ -1,11 +1,6 @@
 <template>
  <div class="content-wrapper">
- <div class="alert alert-info fade in">
- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-  <span aria-hidden="true">&times;</span>
-</button>
- {{pageMsg}}
- </div>
+ 
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
@@ -41,7 +36,7 @@
             <tr v-for="r in expmRoots">
               <td><input type="text" class="form-control" v-model="r.index" ></td>
               <td><input type="text" class="form-control" v-model="r.name" ></td>
-              <td><input type="text" class="form-control" v-model="r.description" > </td>
+              <td><textarea type="text" class="form-control" rows="10" v-model="r.description" ></textarea> </td>
               <td>
                 <img v-if="r.coverImage!=undefined" :src="r.coverImage"  @click="showImage(r)" class="table-image"></i>
                 <span v-else>无</span>
@@ -108,7 +103,7 @@
       }
     },
     created:function(){
-      this.getExpmRoots();
+      this.getExpmRoots(); 
       },
     methods:{
       getExpmRoots:function(){ 
@@ -137,7 +132,7 @@
                 let resultes = response.data
                 if (resultes.success) {
                   this.expmRoots = resultes.data
-                  this.pageMsg='提交成功！'
+                  layer.msg('提交成功！')
                 }
               })
          
