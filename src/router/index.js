@@ -9,6 +9,8 @@ import ApparatusView from '../components/Apparatus.vue'
 import ReagentListView from '../components/ReagentList'
 import ReagentView from '../components/Reagent'
 
+import MessageView from '../components/BroadMessage'
+
 Vue.use(Router)
 
 
@@ -46,6 +48,11 @@ const routes = [
     path:'reagents/:id',
     name:'Reag',
     component:ReagentView
+  },
+  {
+    path:'msg',
+    name:"MSG",
+    component:MessageView
   }
   ]
 }

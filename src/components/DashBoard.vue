@@ -47,6 +47,10 @@
             <li><a href="#">学生</a></li>
           </ul>
         </li>
+
+        <li>
+          <router-link to="/msg"><i class="fa fa-link"></i><span>发送消息</span> </router-link>   
+        </li> 
       </ul>
       <!-- /.sidebar-menu -->
     </section>
