@@ -32,9 +32,13 @@ const routes = [
     name:'Expm',
     component:ExpmView
   },
+    {
+    path:'expms/root/:id',
+    name:'ExpmsOfRoot',
+    component:ExpmListView
+  },
   {
     path:'expmroots',
-    name:'ExpmRoots',
     component: ExpmRootListView
   },
   {
