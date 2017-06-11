@@ -99,7 +99,7 @@ export default {
   created:function(){
     
     console.log(this.$route.params.id);
-     this.axios.get('/expirements/').then((response) => {
+     this.axios.get('/expirements/rootid/'+this.$route.params.id).then((response) => {
         let resultes = response.data;
         if (resultes.success) {
           this.expms = resultes.data;
